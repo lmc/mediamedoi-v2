@@ -1,0 +1,6 @@
+%td <%= media_path %>
+
+%td= link_to "Show", "#/#{:id.ejsv}".html_safe
+/
+  %td= link_to "Edit", "#/#{'id'.ejsv}/edit"
+  %td= link_to "Delete", "#/#{'id'.ejsv}/destroy", class: 'destroy'
