@@ -29,7 +29,14 @@ gem "rails-backbone"
 
 
 # templates
-gem 'haml'
+gem 'haml_assets'
+gem 'ejs'
+#forked version of haml for compatibility with haml_assets
+gem 'haml', :git => 'https://github.com/infbio/haml.git', :branch => 'form_for_fix'
+
+
+# utils
+gem 'foreman'
 
 
 # To use ActiveModel has_secure_password
