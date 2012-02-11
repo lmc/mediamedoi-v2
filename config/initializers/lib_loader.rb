@@ -1,1 +1,1 @@
-require 'core_extensions/string'
+require 'ejs_shortcuts'

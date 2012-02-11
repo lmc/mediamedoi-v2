@@ -4,18 +4,25 @@ class MediaFile < Pathname
   include ActiveModel::Serializers::JSON 
   self.include_root_in_json = false
 
+  MEDIA_ROOT = Rails.root.to_s
+
   def id
-    media_path.hash
+    self.media_path.hash
+  end
+
+  def label
+    self.basename.to_s
   end
 
   def media_path
-    realpath.to_s
+    self.realpath.to_s
   end
 
   def attributes
     {
       :id         => id,
-      :media_path => media_path
+      :label      => label,
+      :media_path => media_path 
     }
   end
 end

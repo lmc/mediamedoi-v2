@@ -32,7 +32,7 @@ gem "rails-backbone"
 gem 'haml_assets'
 gem 'ejs'
 #forked version of haml for compatibility with haml_assets
-gem 'haml', :git => 'https://github.com/infbio/haml.git', :branch => 'form_for_fix'
+gem 'haml'#, :git => 'https://github.com/infbio/haml.git', :branch => 'form_for_fix'
 
 
 # utils

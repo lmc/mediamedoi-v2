@@ -1,1 +1,1 @@
-web: unicorn -p $PORT
+web: rails server -p $PORT
