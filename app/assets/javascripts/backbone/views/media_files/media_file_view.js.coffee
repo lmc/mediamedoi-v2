@@ -9,11 +9,12 @@ class MediamedoiV2.Views.MediaFiles.MediaFileView extends Backbone.View
   tagName: "tr"
 
   destroy: () ->
-    @model.destroy()
-    this.remove()
+    if confirm("Delete?")
+      @model.destroy()
+      this.remove()
 
-    return false
+      return false
 
   render: ->
-    $(@el).html(@template(@model.toJSON() ))
+    $(@el).html(@template(@model.toJSON()))
     return this
