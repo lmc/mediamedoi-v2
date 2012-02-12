@@ -14,7 +14,7 @@ class MediamedoiV2.Views.MediaFiles.IndexView extends Backbone.View
     @$("tbody").append(view.render().el)
 
   render: =>
-    $(@el).html(@template(mediaFiles: @collection.toJSON() ))
+    $(@el).html(@template(media_file: @model.toJSON() ))
     @addAll()
 
     return this

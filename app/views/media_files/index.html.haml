@@ -1,20 +1,9 @@
 .row-fluid
-  /
-    .span8
-      %header
-        %h1 Media Files
-      %table.table
-        %thead
-          %th.path Path
-        %thead
-          - @media_files.each do |media_file|
-            %tr
-              %td.path= media_file.basename
   .span8#media_files
     
   .span4
     right
 
 = javascript_tag do
-  window.router = new MediamedoiV2.Routers.MediaFilesRouter({media_files: #{@media_files.to_json.html_safe} });
+  window.router = new MediamedoiV2.Routers.MediaFilesRouter({});
   Backbone.history.start();
