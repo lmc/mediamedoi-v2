@@ -3,6 +3,10 @@ MediamedoiV2.Views.MediaFiles ||= {}
 class MediamedoiV2.Views.MediaFiles.IndexView extends Backbone.View
   template: JST["backbone/templates/media_files/index"]
 
+  events:
+    'click tr'         : 'navigate'
+    'click a.navigate' : 'navigate'
+
   initialize: () ->
     @collection.bind('reset', @addAll)
 
@@ -18,3 +22,7 @@ class MediamedoiV2.Views.MediaFiles.IndexView extends Backbone.View
     @addAll()
 
     return this
+
+  navigate: (event) =>
+    url = $(event.target).closest('tr').find('a.navigate').attr('href')
+    Backbone.history.navigate(url, true)
